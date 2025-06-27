@@ -1,0 +1,84 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#main-content {
+    width: 100%;
+    height: 100vh;
+}
+
+.scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.1);
+    will-change: opacity, transform;
+}
+
+#scene-1 { background-image: url('https://r2.flowith.net/files/o/1751057248494-minimalist_cartoon_cute_pastel_volleyball_index_0@1024x1024.png'); }
+#scene-2 { background-image: url('https://r2.flowith.net/files/o/1751057248185-minimalist_cartoon_volleyball_cupcake_celebration_index_1@1024x1024.png'); }
+#scene-3 { background-image: url('https://r2.flowith.net/files/o/1751057228478-minimalist_cartoon_girl_playing_volleyball_with_heart_ball_index_2@1024x1024.png'); }
+#scene-4 { background-image: url('https://r2.flowith.net/files/o/1751057201170-minimalist_cartoon_couple_under_starry_sky_index_3@1024x1024.png'); }
+
+.animated-text {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+    font-weight: 500;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+}
+
+.animated-text-line {
+    opacity: 0;
+    transform: translateY(40px);
+    will-change: opacity, transform;
+}
+
+@media (min-width: 768px) {
+    .animated-text {
+        bottom: 20%;
+    }
+}
+
+#volleyball {
+    bottom: 15%;
+    left: -150px;
+    font-size: clamp(4rem, 10vw, 6rem);
+    opacity: 0;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+    will-change: opacity, left, transform;
+}
+
+.sweet {
+    position: absolute;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    opacity: 0;
+    transform: scale(0);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    will-change: opacity, transform;
+}
+
+
+.final-card {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    will-change: opacity, transform;
+}
+
+.final-card .content-to-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: opacity, transform;
+}

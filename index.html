@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật Em Bé!</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-900 font-quicksand overflow-hidden">
+
+    <div id="start-screen" class="fixed inset-0 bg-gradient-to-br from-pink-200 to-sky-200 flex flex-col justify-center items-center z-50">
+        <div class="text-center p-8">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-700 mb-4">Một món quà nhỏ cho em</h1>
+            <p class="text-gray-600 mb-8 text-base md:text-lg">Happy Birthday, 28/06</p>
+            <button id="start-btn" class="bg-pink-400 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-pink-500 transition-all duration-300 transform hover:scale-105">
+                Bấm vào đây nhé
+            </button>
+        </div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <audio id="bg-music" loop>
+            <source src="https://v3.fal.media/files/elephant/TqFb1cjyWOrZvgXdEqN8s_output_20250627204816_0.wav" type="audio/wav">
+        </audio>
+
+        <button id="mute-btn" class="fixed top-4 right-4 z-40 bg-white/30 backdrop-blur-sm text-gray-700 p-2 rounded-full hover:bg-white/50 transition-colors">
+            <i data-lucide="volume-2" id="volume-icon"></i>
+            <i data-lucide="volume-x" id="volume-x-icon" class="hidden"></i>
+        </button>
+
+        <div id="scene-container" class="relative w-full h-screen overflow-hidden">
+            <!-- Scene 1 -->
+            <div id="scene-1" class="scene">
+                <div class="animated-text">
+                    <p class="animated-text-line" id="line1-1">Chúc mừng sinh nhật</p>
+                    <p class="animated-text-line font-bold text-yellow-200" id="line1-2">Hoàng Thị Diệu Linh</p>
+                </div>
+                <div id="volleyball" class="absolute text-5xl">🏐</div>
+            </div>
+
+            <!-- Scene 2 -->
+            <div id="scene-2" class="scene">
+                <div class="animated-text">
+                    <p class="animated-text-line" id="line2-1">Tuổi mới ngày càng xinh hơn, ngoan hơn,</p>
+                    <p class="animated-text-line" id="line2-2">và yêu anh hơn nhé!</p>
+                </div>
+                 <div id="sweets-container" class="absolute w-full h-full inset-0">
+                    <span class="sweet" style="top: 20%; left: 15%;">🍭</span>
+                    <span class="sweet" style="top: 30%; left: 80%;">🍬</span>
+                    <span class="sweet" style="top: 70%; left: 20%;">🍰</span>
+                    <span class="sweet" style="top: 80%; left: 75%;">🍩</span>
+                </div>
+            </div>
+
+            <!-- Scene 3 -->
+            <div id="scene-3" class="scene">
+                 <div class="animated-text">
+                    <p class="animated-text-line" id="line3-1">Và phải luôn giữ lấy sự vui vẻ đó nha</p>
+                </div>
+            </div>
+
+            <!-- Scene 4 -->
+            <div id="scene-4" class="scene">
+                 <div class="animated-text">
+                    <p class="animated-text-line" id="line4-1">Anh yêu em</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="final-message-container" class="fixed inset-0 bg-black/50 backdrop-blur-md flex justify-center items-center opacity-0 pointer-events-none z-40">
+            <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-lg text-center mx-4 final-card">
+                 <h2 class="text-2xl md:text-3xl font-bold text-pink-500 mb-6 content-to-animate">Gửi Hoàng Thị Diệu Linh,</h2>
+                 <p class="text-gray-700 text-base md:text-lg leading-relaxed content-to-animate">
+                    Chúc em bé của anh tuổi mới ngày càng xinh hơn, ngoan hơn, yêu anh hơn, và phải luôn giữ lấy sự vui vẻ nhé.
+                 </p>
+                 <p class="text-gray-800 text-xl md:text-2xl font-bold mt-8 content-to-animate">
+                    Anh yêu em ❤️
+                 </p>
+            </div>
+        </div>
+    </main>
+    
+    <script type="module" src="https://esm.run/framer-motion"></script>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
